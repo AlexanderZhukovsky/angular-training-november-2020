@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-first-test',
+  selector: 'first-test',
   templateUrl: './first-test.component.html',
-  styleUrls: ['./first-test.component.scss']
+  styleUrls: ['./first-test.component.scss'],
+  // encapsulation: ViewEncapsulation.ShadowDom
 })
 export class FirstTestComponent implements OnInit {
 
