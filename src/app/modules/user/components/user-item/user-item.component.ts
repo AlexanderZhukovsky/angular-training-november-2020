@@ -1,20 +1,27 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { HelperService } from 'src/app/modules/services/helper.service';
+import { IUser } from '../../user.interface';
 
 @Component({
-  selector: 'app-user-item',
+  selector: 'user-item',
   templateUrl: './user-item.component.html',
   styleUrls: ['./user-item.component.scss'],
-  // providers: [HelperService]
 })
 export class UserItemComponent implements OnInit {
-  public name: string;
+  @Input() userData: IUser;
+  @Input() isRegistered: boolean;
 
-  constructor(private helperService: HelperService) { }
+  @Output() buttonClick = new EventEmitter<string>();
+
+  constructor() { }
 
   ngOnInit(): void {
-    const firstName = this.helperService.showFirstName();
-    this.helperService.consoleLog(firstName);
+    console.log(this.userData);
+  }
+
+  public onButtonClick(): void {
+    console.log('Button Clicked!');
+    const middleName = this.userData.firstName + this.userData.lastName;
+    this.buttonClick.emit(middleName);
   }
 
 }

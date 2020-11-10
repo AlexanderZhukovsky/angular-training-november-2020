@@ -1,0 +1,24 @@
+<p>users-list works!</p>
+
+
+<ng-container *ngIf="true">
+    <div *ngFor="let item of users" [hidden]="false">
+        <user-item [userData]="item" (buttonClick)="onChildComponentClicked($event)"></user-item>
+    </div>
+</ng-container>
+
+<div [ngSwitch]="testEnumValue">
+    <div *ngSwitchCase="1">Hello 1</div>
+    <div *ngSwitchCase="2">Hello 2</div>
+
+    <div *ngSwitchDefault>Hello default</div>
+</div>
+
+
+<div *ngIf="testBoolean; else loggedOut">
+    Welcome back, friend.
+</div>
+
+<ng-template #loggedOut>
+    Please friend, login.
+</ng-template>
