@@ -1,6 +1,8 @@
 <p>users-list works!</p>
 
 
+<!-- <user-item [userData]="users[0]" (buttonClick)="onChildComponentClicked($event)"></user-item> -->
+
 <ng-container *ngIf="true">
     <div *ngFor="let item of users" [hidden]="false">
         <user-item [userData]="item" (buttonClick)="onChildComponentClicked($event)"></user-item>

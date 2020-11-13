@@ -15,13 +15,18 @@ export class UserItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.userData);
+    //console.log(this.userData);
   }
 
   public onButtonClick(): void {
     console.log('Button Clicked!');
     const middleName = this.userData.firstName + this.userData.lastName;
     this.buttonClick.emit(middleName);
+  }
+
+  public showMyName(): void {
+    const middleName = this.userData.firstName + this.userData.lastName;
+    console.log(middleName);
   }
 
 }
