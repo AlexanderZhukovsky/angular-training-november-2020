@@ -18,6 +18,9 @@ import { SecurityInfoComponent } from './components/forms/complex-validation/sec
 import { PersonalInfoComponent } from './components/forms/complex-validation/personal-info/personal-info.component';
 import { DataManipulationComponent } from './components/forms/data-manipulation/data-manipulation.component';
 import { DataManipulationAddressesComponent } from './components/forms/data-manipulation/addresses.component';
+import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
+import { JokeComponent } from './components/life-cycle/joke.component';
+import { JokeListComponent } from './components/life-cycle/joke-list.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +35,10 @@ import { DataManipulationAddressesComponent } from './components/forms/data-mani
         SecurityInfoComponent,
         PersonalInfoComponent,
         DataManipulationComponent,
-        DataManipulationAddressesComponent
+        DataManipulationAddressesComponent,
+        LifeCycleComponent,
+        JokeComponent,
+        JokeListComponent
     ],
     imports: [
         BrowserModule,
