@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +21,9 @@ import { DataManipulationAddressesComponent } from './components/forms/data-mani
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
 import { JokeComponent } from './components/life-cycle/joke.component';
 import { JokeListComponent } from './components/life-cycle/joke-list.component';
+import { ChildObsComponentComponent } from './components/rxjs-example/child-obs-component/child-obs-component.component';
+import { ChildSubjectTypesComponent } from './components/rxjs-example/child-subject-types/child-subject-types.component';
+import { ParentObsComponentComponent } from './components/rxjs-example/parent-obs-component/parent-obs-component.component';
 
 @NgModule({
     declarations: [
@@ -38,7 +41,10 @@ import { JokeListComponent } from './components/life-cycle/joke-list.component';
         DataManipulationAddressesComponent,
         LifeCycleComponent,
         JokeComponent,
-        JokeListComponent
+        JokeListComponent,
+        ParentObsComponentComponent,
+        ChildSubjectTypesComponent,
+        ChildObsComponentComponent
     ],
     imports: [
         BrowserModule,
@@ -47,7 +53,7 @@ import { JokeListComponent } from './components/life-cycle/joke-list.component';
         BrowserAnimationsModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        PrettyJsonModule
+        PrettyJsonModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

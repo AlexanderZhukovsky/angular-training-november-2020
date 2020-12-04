@@ -6,6 +6,7 @@ import { DataManipulationComponent } from './components/forms/data-manipulation/
 import { SimpleFormElementsComponent } from './components/forms/simple-form-elements/simple-form-elements.component';
 import { SimpleValidationComponent } from './components/forms/simple-validation/simple-validation.component';
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
+import { ParentObsComponentComponent } from './components/rxjs-example/parent-obs-component/parent-obs-component.component';
 
 const routes: Routes = [
     { path: 'simple-elements', component: SimpleFormElementsComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'complex-form', component: ComplexFormComponent },
     { path: 'complex-validation', component: ComplexValidationComponent },
     { path: 'data-manipulation', component: DataManipulationComponent },
-    { path: 'life-cycle', component: LifeCycleComponent}
+    { path: 'life-cycle', component: LifeCycleComponent},
+    { path: 'rxjs', component: ParentObsComponentComponent }
 ];
 
 @NgModule({
