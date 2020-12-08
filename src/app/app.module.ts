@@ -24,6 +24,10 @@ import { JokeListComponent } from './components/life-cycle/joke-list.component';
 import { ChildObsComponentComponent } from './components/rxjs-example/child-obs-component/child-obs-component.component';
 import { ChildSubjectTypesComponent } from './components/rxjs-example/child-subject-types/child-subject-types.component';
 import { ParentObsComponentComponent } from './components/rxjs-example/parent-obs-component/parent-obs-component.component';
+import { SomeTestExampleModule } from './modules/routing-example/some-test-example.module';
+import { PipeExampleComponent } from './components/pipe-example/pipe-example.component';
+import { ExponentialStrengthPipe } from './components/pipe-example/exponential-strength.pipe';
+import { FlyingHeroesPipe } from './components/pipe-example/flying-heros.pipe';
 
 @NgModule({
     declarations: [
@@ -44,16 +48,19 @@ import { ParentObsComponentComponent } from './components/rxjs-example/parent-ob
         JokeListComponent,
         ParentObsComponentComponent,
         ChildSubjectTypesComponent,
-        ChildObsComponentComponent
+        ChildObsComponentComponent,
+        PipeExampleComponent,
+        ExponentialStrengthPipe,
+        FlyingHeroesPipe
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         UserModule,
         BrowserAnimationsModule,
-        AppRoutingModule,
         ReactiveFormsModule,
         PrettyJsonModule,
+        SomeTestExampleModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { DataManipulationComponent } from './components/forms/data-manipulation/
 import { SimpleFormElementsComponent } from './components/forms/simple-form-elements/simple-form-elements.component';
 import { SimpleValidationComponent } from './components/forms/simple-validation/simple-validation.component';
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
+import { PipeExampleComponent } from './components/pipe-example/pipe-example.component';
 import { ParentObsComponentComponent } from './components/rxjs-example/parent-obs-component/parent-obs-component.component';
 
 const routes: Routes = [
@@ -15,7 +16,15 @@ const routes: Routes = [
     { path: 'complex-validation', component: ComplexValidationComponent },
     { path: 'data-manipulation', component: DataManipulationComponent },
     { path: 'life-cycle', component: LifeCycleComponent},
-    { path: 'rxjs', component: ParentObsComponentComponent }
+    { path: 'rxjs', component: ParentObsComponentComponent },
+    {
+        path: 'pipe-example',
+        component: PipeExampleComponent
+    },
+    {
+        path: 'dynamic-module-page',
+        loadChildren: () => import('../app/modules/dynamic-loading/dynamic-loading.module').then(m => m.DynamicLoadingModule)
+    }
 ];
 
 @NgModule({
