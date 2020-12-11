@@ -1,4 +1,3 @@
-
 // Routing module components
 
 import { NgModule } from '@angular/core';
@@ -9,6 +8,7 @@ import { SecondPageComponent } from './components/second-page/second-page.compon
 import { ParentPageComponent } from './components/parent-page/parent-page.component';
 import { FirstChildPageComponent } from './components/first-child-page/first-child-page.component';
 import { SecondChildPageComponent } from './components/second-child-page/second-child-page.component';
+import { AuthGuard } from './auth.guard';
 
 const testModuleRoutes: Routes = [
     {
@@ -22,6 +22,12 @@ const testModuleRoutes: Routes = [
     {
         path: 'parent-page',
         component: ParentPageComponent,
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        canDeactivate: [AuthGuard],
+        resolve: {
+            myObj: AuthGuard
+        },
         children: [
             {
                 path: '',

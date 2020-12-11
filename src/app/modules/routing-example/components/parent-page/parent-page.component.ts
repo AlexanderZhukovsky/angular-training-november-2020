@@ -12,9 +12,15 @@ export class ParentPageComponent implements OnInit {
     constructor(
         private router: Router,
         private activatedRoute: ActivatedRoute
-    ) { }
+    ) {
+        debugger;
+        var a = this.activatedRoute.snapshot.data;
+    }
 
-    ngOnInit() {
+    ngOnInit() {}
+
+    public saveData(): void {
+        console.log('Data Saved');
     }
 
     public goToFirstChildPage(): void {

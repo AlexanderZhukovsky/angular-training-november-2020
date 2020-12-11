@@ -8,6 +8,8 @@ import { FirstChildPageComponent } from './components/first-child-page/first-chi
 import { SecondChildPageComponent } from './components/second-child-page/second-child-page.component';
 
 import { SomeTestExampleRoutingModule } from './some-test-example-routing.module';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
     declarations: [
@@ -20,6 +22,7 @@ import { SomeTestExampleRoutingModule } from './some-test-example-routing.module
     imports: [
         CommonModule,
         SomeTestExampleRoutingModule
-    ]
+    ],
+    providers: [AuthService, AuthGuard]
 })
 export class SomeTestExampleModule { }
